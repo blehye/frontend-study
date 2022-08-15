@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>종합실습문제01</title>
+  </head>
+  <body>
+    <h1>주문하기</h1>
+    <form action="">
+      <label for="userName">고객명 : </label>
+      <input id="userName" name="userName" type="text" />
+      <br /><br />
+      <label for="userPhone">전화번호 : </label>
+      <input id="userPhone" name="userPhone" type="text" />
+      <br /><br />
+      <label for="userEmail">E-mail : </label>
+      <input id="userEmail" name="userEmail" type="text" />
+      <br />
+
+      <fieldset>
+        <legend>피자 사이즈</legend>
+        <input type="radio" name="pizzaSize" value="Small" id="r01" />
+        <label for="r01">Small</label>
+        <br /><br />
+        <input type="radio" name="pizzaSize" value="Medium" id="r02" />
+        <label for="r02">Medium</label>
+        <br /><br />
+        <input type="radio" name="pizzaSize" value="Large" id="r03" />
+        <label for="r03">Large</label>
+      </fieldset>
+
+      <fieldset>
+        <legend>토핑 선택</legend>
+        <input type="checkbox" name="topping" value="bacon" id="t01" />
+        <label for="t01">베이컨</label>
+        <br /><br />
+        <input type="checkbox" name="topping" value="cheese" id="t02" />
+        <label for="t02">치즈</label>
+        <br /><br />
+        <input type="checkbox" name="topping" value="onion" id="t03" />
+        <label for="t03">양파</label>
+        <br /><br />
+        <input type="checkbox" name="topping" value="mushroom" id="t04" />
+        <label for="t04">버섯</label>
+      </fieldset>
+      <br />
+      <label for="time">희망 배송 시간 : </label>
+      <input id="time" type="time" name="time" id="" />
+      <br /><br />
+      <label for="request">배송 시 요청사항 : </label>
+      <textarea id="request" name="request" cols="15" rows="3"></textarea>
+      <br /><br />
+      <input type="submit" id="" value="주문하기" />
+    </form>
+  </body>
+</html>

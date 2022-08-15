@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>종합실습문제03</title>
+  </head>
+  <body>
+    <h1>회원가입</h1>
+    <form action="">
+      <fieldset>
+        <legend>필수 입력 사항</legend>
+        <table>
+          <tr>
+            <th><label for="userId">ID</label></th>
+            <td>
+              <input
+                id="userId"
+                name="userId"
+                type="text"
+                placeholder="아이디 10글자 이내"
+                maxlength="10"
+                size="30"
+                required
+              />
+            </td>
+            <td><input type="button" value="중복확인" /></td>
+          </tr>
+          <tr>
+            <th><label for="userPwd">비밀번호</label></th>
+            <td>
+              <input
+                id="userPwd"
+                name="userPwd"
+                type="password"
+                placeholder="영문, 숫자, 특수문자 포함 8자 이상"
+                minlength="8"
+                size="30"
+                required
+              />
+            </td>
+            <td></td>
+          </tr>
+          <tr>
+            <th><label for="userPwd2">비밀번호 확인</label></th>
+            <td>
+              <input
+                id="userPwd2"
+                name="userPwd2"
+                type="password"
+                size="30"
+                minlength="8"
+                required
+              />
+            </td>
+            <td></td>
+          </tr>
+          <tr>
+            <th><label for="userEmail">email</label></th>
+            <td>
+              <input
+                id="userEmail"
+                name="userEmail"
+                type="email"
+                size="30"
+                required
+              />
+            </td>
+            <td>
+              <select name="" id="">
+                <option value="">직접입력</option>
+                <option value="">@naver.com</option>
+                <option value="">@gmail.com</option>
+              </select>
+            </td>
+          </tr>
+        </table>
+      </fieldset>
+
+      <fieldset>
+        <legend>추가 정보</legend>
+
+        <label for="profilePhoto">프로필 사진 : </label>
+        <input id="profilePhoto" name="profilePhoto" type="file" />
+        <br /><br />
+        <label>성별 : </label>
+        <input
+          name="gender"
+          type="radio"
+          name="gender"
+          value="male"
+          id="r01"
+          checked
+        />
+        <label for="r01">남자</label>
+
+        <input type="radio" name="gender" value="female" id="r02" />
+        <label for="r02">여자</label>
+
+        <br /><br />
+        <label for="birth">생년월일 : </label>
+        <input id="birth" type="date" name="birth" />
+        <br /><br />
+        <label>취미 : </label>
+        <br />
+        <input type="checkbox" name="hobby" value="game" id="h01" />
+        <label for="h01">게임</label>
+
+        <input type="checkbox" name="hobby" value="workout" id="h02" />
+        <label for="h01">운동</label>
+
+        <input type="checkbox" name="hobby" value="sleep" id="h03" />
+        <label for="h01">취침</label>
+        <br />
+        <input type="checkbox" name="hobby" value="dance" id="h04" />
+        <label for="h01">댄스</label>
+
+        <input type="checkbox" name="hobby" value="sing" id="h05" />
+        <label for="h01">노래</label>
+
+        <input type="checkbox" name="hobby" value="study" id="h06" checked />
+        <label for="h01">공부</label>
+        <br />
+        <input type="checkbox" name="hobby" value="ect" id="h07" />
+        <label for="h01">기타 : </label>
+        <input type="text" />
+        <br /><br />
+        <label for="introduce">자기소개</label>
+        <br />
+
+        <textarea id="introduce" name="introduce" cols="50" rows="5"></textarea>
+      </fieldset>
+      <br />
+
+      <input type="submit" value="회원가입" />
+      <input type="reset" value="다시입력" />
+      <input type="button" value="이전으로" />
+    </form>
+  </body>
+</html>
