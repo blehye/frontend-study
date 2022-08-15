@@ -1,0 +1,173 @@
+@import "./reset.css";
+
+body {
+  height: 100vh;
+  background-color: rgb(231, 225, 225);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: rgba(0, 0, 0, 0.9);
+}
+
+.total-screen {
+  display: flex;
+  flex-direction: column;
+
+  background-color: whitesmoke;
+  width: 250px;
+  height: 600px;
+
+  border: 5px gray solid;
+  border-radius: 30px;
+
+  padding: 50px 25px 15px 25px;
+}
+
+header {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  margin-bottom: 50px;
+}
+
+header i {
+  position: absolute;
+  left: 0px;
+  top: -5px;
+  font-size: 25px;
+}
+
+header h1 {
+  font-weight: 600;
+  font-size: 20px;
+}
+
+.cover__img {
+  width: 110px;
+  height: 90px;
+  background-color: lightpink;
+  border-radius: 18px;
+
+  border: 3px rgb(66, 64, 64) solid;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cover {
+  display: flex;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.cover__img {
+  margin-right: 10px;
+}
+
+.cover__img i {
+  font-size: 40px;
+}
+
+.cover__title {
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+
+.cover__author {
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 30px;
+}
+
+.buttons .play {
+  width: 50%;
+  height: 40px;
+  background-color: white;
+  border-radius: 10px;
+  border: 2px rgba(0, 0, 0, 0.8) solid;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom-width: 5px;
+}
+
+.buttons div {
+  border-bottom-width: 5px;
+}
+
+.play i {
+  margin-right: 5px;
+}
+
+.play div {
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 3px;
+}
+
+.heart,
+.plus {
+  width: 40px;
+  height: 40px;
+  background-color: white;
+  border: 2px rgba(0, 0, 0, 0.8) solid;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.heart i {
+  font-size: 20px;
+}
+
+.plus i {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.song-list__song {
+  display: flex;
+  align-items: center;
+  margin-bottom: 25px;
+}
+
+.song-list__cover {
+  width: 50px;
+  height: 50px;
+  border-radius: 10px;
+  border: 2px gray solid;
+  margin-right: 15px;
+}
+
+.song-list__data h5 {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.song-list__data h6 {
+  font-size: 15px;
+  margin-top: 10px;
+}
+
+.song-list__song:nth-child(1) .song-list__cover {
+  background-color: rgb(240, 118, 96);
+}
+
+.song-list__song:nth-child(2) .song-list__cover {
+  background-color: rgb(223, 178, 143);
+}
+
+.song-list__song:nth-child(3) .song-list__cover {
+  background-color: rgb(136, 160, 232);
+}
+
+.song-list__song:nth-child(4) .song-list__cover {
+  background-color: rgb(142, 221, 168);
+}

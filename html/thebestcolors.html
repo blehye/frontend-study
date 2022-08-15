@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        background-color: rgb(243, 239, 239);
+      }
+      header h1 {
+        text-align: center;
+      }
+
+      .tomato {
+        background-color: tomato;
+      }
+
+      .teal {
+        background-color: teal;
+      }
+
+      .burlywood {
+        background-color: burlywood;
+      }
+
+      .thistle {
+        background-color: thistle;
+      }
+
+      .box {
+        width: 180px;
+        height: 300px;
+        margin: 7px 7px;
+        border: 5px solid white;
+      }
+
+      .first-row,
+      .second-row {
+        display: flex;
+        justify-content: center;
+      }
+
+      .color-code {
+        width: 100%;
+        height: 30%;
+        background-color: white;
+        margin-top: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+      }
+
+      .color-code div {
+        font-weight: 600;
+      }
+    </style>
+  </head>
+  <body>
+    <header><h1>The Best Colors</h1></header>
+    <div class="first-row">
+      <div class="tomato box">
+        <div class="color-code">
+          <div>Tomato</div>
+          <div>#FF6347</div>
+        </div>
+      </div>
+      <div class="teal box">
+        <div class="color-code">
+          <div>Teal</div>
+          <div>#008080</div>
+        </div>
+      </div>
+    </div>
+    <div class="second-row">
+      <div class="burlywood box">
+        <div class="color-code">
+          <div>Burlywood</div>
+          <div>#DEB887</div>
+        </div>
+      </div>
+      <div class="thistle box">
+        <div class="color-code">
+          <div>Thistle</div>
+          <div>#D7BFD7</div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>flexbox</title>
+    <style>
+      body {
+        height: 100vh;
+        background-color: tomato;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .outter-box {
+        background-color: bisque;
+        border: 2px solid black;
+        width: 400px;
+        height: 400px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .inner-box {
+        background-color: teal;
+
+        height: 20%;
+      }
+
+      .short {
+        border: 2px white solid;
+        width: 20%;
+      }
+
+      .long {
+        border: 2px white dashed;
+        width: 80%;
+        margin: 20px 0px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="outter-box">
+      <div class="inner-box short"></div>
+      <div class="inner-box long"></div>
+      <div class="inner-box short"></div>
+    </div>
+  </body>
+</html>
