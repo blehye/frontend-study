@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .box {
+        width: 150px;
+        height: 150px;
+        border: 1px solid black;
+      }
+    </style>
+  </head>
+  <body>
+    <input type="color" />
+    <button onclick="changeColor()">색상 변경하기</button>
+
+    <div id="b1" class="box"></div>
+
+    <script>
+      function changeColor() {
+        color = document.querySelector("input[type=color]").value;
+        b1 = document.querySelector("#b1");
+        b1.style.backgroundColor = color;
+        b1.innerHTML = "색상 변경 완료";
+        b1.style.borderRadius = "50%";
+        b1.style.display = "flex";
+        b1.style.alignItems = "center";
+        b1.style.justifyContent = "center";
+      }
+    </script>
+
+    <br /><br /><br /><br /><br />
+
+    <label for="in1">구매자 : </label>
+    <input type="text" id="in1" placeholder="구매자 이름" />
+    <br />
+    <label for="in2">상품명 : </label>
+    <input type="text" id="in2" placeholder="상품명 이름" />
+    <br />
+    <label for="in3">수량 : </label>
+    <input type="text" id="in3" placeholder="구매 수량" />
+    <br /><br />
+
+    <button onclick="printOrder()">구매정보출력</button>
+    <br /><br />
+    <div id="d1" class="box"></div>
+
+    <script>
+      function printOrder() {
+        in1 = document.querySelector("#in1");
+        in2 = document.querySelector("#in2");
+        in3 = document.querySelector("#in3");
+
+        d1 = document.querySelector("#d1");
+        d1.innerHTML = `구매자이름 : ${in1.value} <br> 상품명이름 : ${in2.value} <br> 구매수량 : ${in3.value}`;
+      }
+    </script>
+  </body>
+</html>
