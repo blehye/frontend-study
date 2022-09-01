@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>함수 실습</title>
+    <style>
+      table {
+        border: 3px solid blue;
+      }
+      #result {
+        height: 50px;
+        font-size: 2em;
+        font-weight: bold;
+        text-align: right;
+        border: 1px solid black;
+        width: 210px;
+        overflow: hidden;
+      }
+      button {
+        font-size: 1.5em;
+        font-weight: bold;
+        width: 50px;
+        height: 50px;
+      }
+      .row {
+        width: 100%;
+        display: flex;
+        margin-bottom: 10px;
+        justify-content: space-between;
+      }
+      .row button {
+        border-radius: 50%;
+        border-style: none;
+        border-bottom: 3px solid rgba(0, 0, 0, 0.5);
+      }
+      .row button:hover {
+        background-color: rgb(187, 186, 187);
+      }
+      .new {
+        background-color: #bfb8da;
+        border-radius: 20px;
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+        width: 250px;
+        height: 370px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 25px 20px 10px 20px;
+      }
+      .new-result {
+        width: 220px !important;
+        height: 60px !important;
+        background-color: #f5f1e3;
+        border-radius: 15px;
+        border-style: none !important;
+        margin-bottom: 20px;
+        padding: 0px 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>함수 실습</h1>
+
+    <hr />
+
+    <h3>계산기 만들기(내장 함수 사용)</h3>
+
+    <div class="new">
+      <div id="result" class="new-result">0</div>
+      <div class="row">
+        <button id="left" onclick="buttonClick(this.innerHTML);">(</button>
+        <button id="right" onclick="buttonClick(this.innerHTML);">)</button>
+        <button id="percent" onclick="buttonClick(this.innerHTML);">%</button>
+        <button id="clear" onclick="buttonClick(this.innerHTML);">AC</button>
+      </div>
+      <div class="row">
+        <button id="seven" onclick="buttonClick(this.innerHTML);">7</button>
+
+        <button id="eight" onclick="buttonClick(this.innerHTML);">8</button>
+
+        <button id="nine" onclick="buttonClick(this.innerHTML);">9</button>
+
+        <button id="devide" onclick="buttonClick(this.innerHTML);">/</button>
+      </div>
+      <div class="row">
+        <button id="four" onclick="buttonClick(this.innerHTML);">4</button>
+
+        <button id="five" onclick="buttonClick(this.innerHTML);">5</button>
+
+        <button id="six" onclick="buttonClick(this.innerHTML);">6</button>
+
+        <button id="astric" onclick="buttonClick(this.innerHTML);">*</button>
+      </div>
+      <div class="row">
+        <button id="one" onclick="buttonClick(this.innerHTML);">1</button>
+          </td>
+          <td>
+            <button id="two" onclick="buttonClick(this.innerHTML);">2</button>
+          </td>
+          <td>
+            <button id="three" onclick="buttonClick(this.innerHTML);">3</button>
+          </td>
+          <td>
+            <button id="minus" onclick="buttonClick(this.innerHTML);">-</button>
+      </div>
+      <div class="row">
+        <button id="zero" onclick="buttonClick(this.innerHTML);">0</button>
+
+        <button id="dot" onclick="buttonClick(this.innerHTML);">.</button>
+
+        <button id="equal" onclick="buttonClick(this.innerHTML);">=</button>
+
+        <button id="plus" onclick="buttonClick(this.innerHTML);">+</button>
+      </div>
+    </div>
+    <br /><br /><br /><br /><br />
+    <div>
+      <table>
+        <tr>
+          <td colspan="4">
+            <div id="result">0</div>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <button id="left" onclick="buttonClick(this.innerHTML);">(</button>
+          </td>
+          <td>
+            <button id="right" onclick="buttonClick(this.innerHTML);">)</button>
+          </td>
+          <td>
+            <button id="percent" onclick="buttonClick(this.innerHTML);">
+              %
+            </button>
+          </td>
+          <td>
+            <button id="clear" onclick="buttonClick(this.innerHTML);">
+              AC
+            </button>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <button id="seven" onclick="buttonClick(this.innerHTML);">7</button>
+          </td>
+          <td>
+            <button id="eight" onclick="buttonClick(this.innerHTML);">8</button>
+          </td>
+          <td>
+            <button id="nine" onclick="buttonClick(this.innerHTML);">9</button>
+          </td>
+          <td>
+            <button id="devide" onclick="buttonClick(this.innerHTML);">
+              /
+            </button>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <button id="four" onclick="buttonClick(this.innerHTML);">4</button>
+          </td>
+          <td>
+            <button id="five" onclick="buttonClick(this.innerHTML);">5</button>
+          </td>
+          <td>
+            <button id="six" onclick="buttonClick(this.innerHTML);">6</button>
+          </td>
+          <td>
+            <button id="astric" onclick="buttonClick(this.innerHTML);">
+              *
+            </button>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <button id="one" onclick="buttonClick(this.innerHTML);">1</button>
+          </td>
+          <td>
+            <button id="two" onclick="buttonClick(this.innerHTML);">2</button>
+          </td>
+          <td>
+            <button id="three" onclick="buttonClick(this.innerHTML);">3</button>
+          </td>
+          <td>
+            <button id="minus" onclick="buttonClick(this.innerHTML);">-</button>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <button id="zero" onclick="buttonClick(this.innerHTML);">0</button>
+          </td>
+          <td>
+            <button id="dot" onclick="buttonClick(this.innerHTML);">.</button>
+          </td>
+          <td>
+            <button id="equal" onclick="buttonClick(this.innerHTML);">=</button>
+          </td>
+          <td>
+            <button id="plus" onclick="buttonClick(this.innerHTML);">+</button>
+          </td>
+        </tr>
+      </table>
+    </div>
+    <script>
+      const result = document.querySelector("#result");
+      const left = document.querySelector("#left");
+      const right = document.querySelector("#right");
+      const percent = document.querySelector("#percent");
+      const clear = document.querySelector("#clear");
+      const one = document.querySelector("#one");
+      const two = document.querySelector("#two");
+      const three = document.querySelector("#three");
+      const four = document.querySelector("#four");
+      const five = document.querySelector("#five");
+      const six = document.querySelector("#six");
+      const seven = document.querySelector("#seven");
+      const eight = document.querySelector("#eight");
+      const nine = document.querySelector("#nine");
+      const devide = document.querySelector("#devide");
+      const astric = document.querySelector("#astric");
+      const minus = document.querySelector("#minus");
+      const plus = document.querySelector("#plus");
+      const equal = document.querySelector("#equal");
+      const dot = document.querySelector("#dot");
+
+      let calc = "";
+      //   zero.addEventListener("click", () => {
+      //     calc += "0";
+      //     result.innerHTML = calc;
+      //   });
+      //   one.addEventListener("click", () => {
+      //     calc += "1";
+      //     result.innerHTML = calc;
+      //   });
+      //   two.addEventListener("click", () => {
+      //     calc += "2";
+      //     result.innerHTML = calc;
+      //   });
+      //   three.addEventListener("click", () => {
+      //     calc += "3";
+      //     result.innerHTML = calc;
+      //   });
+      //   four.addEventListener("click", () => {
+      //     calc += "4";
+      //     result.innerHTML = calc;
+      //   });
+      //   five.addEventListener("click", () => {
+      //     calc += "5";
+      //     result.innerHTML = calc;
+      //   });
+      //   six.addEventListener("click", () => {
+      //     calc += "6";
+      //     result.innerHTML = calc;
+      //   });
+      //   seven.addEventListener("click", () => {
+      //     calc += "7";
+      //     result.innerHTML = calc;
+      //   });
+      //   eight.addEventListener("click", () => {
+      //     calc += "8";
+      //     result.innerHTML = calc;
+      //   });
+      //   nine.addEventListener("click", () => {
+      //     calc += "9";
+      //     result.innerHTML = calc;
+      //   });
+      //   plus.addEventListener("click", () => {
+      //     calc += "+";
+      //     result.innerHTML = calc;
+      //   });
+      //   minus.addEventListener("click", () => {
+      //     calc += "-";
+      //     result.innerHTML = calc;
+      //   });
+      //   devide.addEventListener("click", () => {
+      //     calc += "/";
+      //     result.innerHTML = calc;
+      //   });
+      //   astric.addEventListener("click", () => {
+      //     calc += "*";
+      //     result.innerHTML = calc;
+      //   });
+      //   left.addEventListener("click", () => {
+      //     calc += "(";
+      //     result.innerHTML = calc;
+      //   });
+      //   right.addEventListener("click", () => {
+      //     calc += ")";
+      //     result.innerHTML = calc;
+      //   });
+      //   dot.addEventListener("click", () => {
+      //     calc += ".";
+      //     result.innerHTML = calc;
+      //   });
+      //   percent.addEventListener("click", () => {
+      //     calc += "%";
+      //     result.innerHTML = calc;
+      //   });
+
+      //   clear.addEventListener("click", () => {
+      //     calc = "0";
+      //     result.innerHTML = calc;
+      //     calc = "";
+      //   });
+      //   equal.addEventListener("click", () => {
+      //     result.innerHTML = eval(calc);
+      //   });
+      function buttonClick(x) {
+        let str = x.trim();
+        if (str == "=") {
+          result.innerHTML = eval(calc);
+        } else if (str == "AC") {
+          calc = "0";
+          result.innerHTML = "0";
+          calc = "";
+        } else {
+          calc += str;
+          result.innerHTML = calc;
+        }
+      }
+    </script>
+  </body>
+</html>
